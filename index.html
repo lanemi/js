@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>添加脚本到收藏夹</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2em;
+    }
+    a.bookmarklet {
+      display: inline-block;
+      font-size: 1.2em;
+      background: #409EFF;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 1em;
+    }
+    a.bookmarklet:hover {
+      background: #66B1FF;
+    }
+  </style>
+</head>
+<body>
+  <h1>📌 添加脚本到收藏夹</h1>
+  <p>请将下方按钮拖动到你的浏览器收藏栏中：</p>
+<!--
+  <a class="bookmarklet" href="javascript:(()=>{let s=document.createElement('script');s.src='https://raw.githubusercontent.com/lanemi/js/refs/heads/main/hz.com.js?t=' + Date.now();document.body.appendChild(s);})();">
+    ▶️ 观看助手
+  </a>
+  -->
+  
+  <a class="bookmarklet" href="javascript:(()=>{try{let s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/lanemi/js/hz.com.js?t=' + Date.now();s.onerror=()=>alert('脚本加载失败，该网页可能不支持加载外部代码。');document.body.appendChild(s);}catch(e){alert('运行出错: ' + e);}})();">
+    ▶️ 观看助手
+  </a>
+  <p>添加后，进入学习平台页面时点击该按钮，即可自动执行脚本。️</p>
+
+  
+</body>
+</html>
